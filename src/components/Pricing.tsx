@@ -50,8 +50,8 @@ export default function Pricing() {
               id={tier.id}
               className={classNames(
                 tier.featured
-                  ? 'text-indigo-400'
-                  : 'text-indigo-600 dark:text-indigo-400',
+                  ? 'text-yellow-400'
+                  : 'text-yellow-600 dark:text-indigo-400',
                 'text-base/7 font-semibold'
               )}
             >
@@ -136,6 +136,17 @@ export default function Pricing() {
             )}
           </div>
         ))}
+      </div>
+      <div className="mt-6 gap-1 text-center">
+        By signing up, you are agreeing to our{' '}
+        <a
+          href="/policies"
+          target="_blank"
+          className="underline hover:no-underline"
+        >
+          policies
+        </a>
+        .
       </div>
     </div>
   );
