@@ -10,6 +10,10 @@ export const NAV: NavProps[] = [
     children: 'Instructors',
   },
   {
+    href: '/#pricing',
+    children: 'Pricing',
+  },
+  {
     href: '/free',
     children: 'Free Class',
   },

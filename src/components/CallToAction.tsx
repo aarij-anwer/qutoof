@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Container } from '@/components/Container';
 import backgroundImage from '@/images/background-call-to-action.jpg';
 import { Button } from './Button';
+import { NAV } from '@/app/constants';
 
 export function CallToAction() {
   return (
@@ -37,7 +38,7 @@ export function CallToAction() {
           </p>
           <div className="mt-8">
             <Button
-              href="/register"
+              href="/#pricing"
               variant="solid"
               className="rounded-full px-8 py-4 shadow-lg ring-1 ring-white/20 ring-inset"
             >
