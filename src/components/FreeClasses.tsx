@@ -15,7 +15,7 @@ const tiers = [
       'Giving ijaza in all 10 Qiraat',
       'Teaching men and women',
       'Teaching young adults and adults',
-      "Memorization and recitation of Qur'an",
+      'Memorization and recitation of Qur&apos;an',
     ],
   },
   {
@@ -29,8 +29,8 @@ const tiers = [
     features: [
       'Giving ijaza in Hafs',
       'Teaching women, boys and girls',
-      "Memorization and recitation of Qur'an",
-      "Learning to read the Qur'an",
+      'Memorization and recitation of Qur&apos;an',
+      'Learning to read the Qur&apos;an',
     ],
   },
 ];
@@ -41,7 +41,7 @@ export default function FreeClasses() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mt-2 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-6xl sm:text-balance dark:text-white">
-            Try a Qur'an class on us!
+            Try a Qur&apos;an class on us!
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 dark:text-gray-400">

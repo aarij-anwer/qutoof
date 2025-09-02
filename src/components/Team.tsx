@@ -12,8 +12,8 @@ export default function Team() {
               Meet our team
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              We're a dynamic team of instructors, fluent in both English and
-              Arabic. All instructors have minimum 10 years of experience in
+              We&apos;re a dynamic team of instructors, fluent in both English
+              and Arabic. All instructors have minimum 10 years of experience in
               their respective subjects.
             </p>
           </div>
