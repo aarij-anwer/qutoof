@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.jpg',
-        width: 640,
-        height: 640,
+        width: 4267,
+        height: 4267,
         alt: 'Qutoof Academy banner',
       },
     ],
