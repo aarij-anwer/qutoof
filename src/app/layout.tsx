@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/next';
 import '@/styles/tailwind.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.qutoofacademy.com'),
   title: {
     template: '%s - Qutoof Academy',
     default: 'Qutoof Academy',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Qutoof Academy',
     images: [
       {
-        url: '/qutooflogo.png',
+        url: '/og-image.jpg',
         width: 640,
         height: 640,
         alt: 'Qutoof Academy banner',
@@ -26,6 +27,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Qutoof Academy',
+    description: "Bringing the fruits of the Qur'an closer.",
+    images: ['/og-image.jpg'],
   },
 };
 
