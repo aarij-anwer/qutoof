@@ -10,7 +10,24 @@ export const metadata: Metadata = {
     template: '%s - Qutoof Academy',
     default: 'Qutoof Academy',
   },
-  description: "Making it easy to learn Qur'an and Arabic since 2014",
+  description: 'Bringing the fruits of the Qur&apos;an closer.',
+  icons: '/logo.png',
+  openGraph: {
+    title: 'Qutoof Academy',
+    description: 'Bringing the fruits of the Qur&apos;an closer.',
+    url: 'https://www.qutoofacademy.com',
+    siteName: 'Qutoof Academy',
+    images: [
+      {
+        url: '/qutoof logo.png',
+        width: 640,
+        height: 640,
+        alt: 'Qutoof Academy banner',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 const inter = Inter({
