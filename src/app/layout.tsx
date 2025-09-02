@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'Qutoof Academy',
     images: [
       {
-        url: '/qutoof logo.png',
+        url: '/qutooflogo.png',
         width: 640,
         height: 640,
         alt: 'Qutoof Academy banner',
