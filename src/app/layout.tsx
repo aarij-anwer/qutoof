@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     default: 'Qutoof Academy',
   },
   description: 'Bringing the fruits of the Qur&apos;an closer.',
-  icons: '/logo.png',
   openGraph: {
     title: 'Qutoof Academy',
     description: 'Bringing the fruits of the Qur&apos;an closer.',
