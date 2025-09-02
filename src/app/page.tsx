@@ -1,9 +1,21 @@
-import Image from "next/image";
+import { CallToAction } from '@/components/CallToAction';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import Team from '@/components/Team';
+import { Testimonials } from '@/components/Testimonials';
 
 export default function Home() {
   return (
-    <div>
-      Coming soon...
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <CallToAction />
+        <Team />
+        {/* <Testimonials /> */}
+      </main>
+      <Footer />
+    </>
   );
 }

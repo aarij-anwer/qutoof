@@ -1,33 +1,47 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { type Metadata } from 'next';
+import { Inter, Lexend } from 'next/font/google';
+import clsx from 'clsx';
+import { Analytics } from '@vercel/analytics/next';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import '@/styles/tailwind.css';
 
 export const metadata: Metadata = {
-  title: "Qutoof Academy",
-  description: "For Qur'an and Arabic studies",
+  title: {
+    template: '%s - Qutoof Academy',
+    default: 'Qutoof Academy',
+  },
+  description: "Making it easy to learn Qur'an and Arabic since 2014",
 };
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lexend',
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={clsx(
+        'h-full scroll-smooth bg-white antialiased',
+        inter.variable,
+        lexend.variable
+      )}
+    >
+      <body className="flex h-full flex-col">
         {children}
+        <Analytics />
       </body>
     </html>
   );
