@@ -1,8 +1,24 @@
+// app/components/FreeClasses.tsx
+'use client';
+
+import { useState } from 'react';
 import { ArrowTurnDownRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './Button';
 import Avatar from './Avatar';
+import CalendlyModal from './CalendlyModal'; // ← from earlier snippet
 
-const tiers = [
+type Tier = {
+  name: string;
+  img: string;
+  id: string;
+  href: string; // Calendly URL
+  text: string;
+  price: { monthly: string; annually: string };
+  description: string;
+  features: string[];
+};
+
+const tiers: Tier[] = [
   {
     name: 'Shaikh Ahmed Hasan',
     img: '/people/ahmed.png',
@@ -15,7 +31,7 @@ const tiers = [
       'Giving ijaza in all 10 Qiraat',
       'Teaching men and women',
       'Teaching young adults and adults',
-      'Memorization and recitation of Qur&apos;an',
+      "Memorization and recitation of Qur'an",
     ],
   },
   {
@@ -29,13 +45,21 @@ const tiers = [
     features: [
       'Giving ijaza in Hafs',
       'Teaching women, boys and girls',
-      'Memorization and recitation of Qur&apos;an',
-      'Learning to read the Qur&apos;an',
+      "Memorization and recitation of Qur'an",
+      "Learning to read the Qur'an",
     ],
   },
 ];
 
 export default function FreeClasses() {
+  const [open, setOpen] = useState(false);
+  const [selectedUrl, setSelectedUrl] = useState<string | null>(null);
+
+  const handleOpen = (url: string) => {
+    setSelectedUrl(url);
+    setOpen(true);
+  };
+
   return (
     <div className="bg-white pt-10 pb-20 sm:py-32 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -48,6 +72,7 @@ export default function FreeClasses() {
           We want you to be satisfied with us before you enroll and subscribe to
           a class.
         </p>
+
         <div className="mt-20 flex justify-center">
           <div className="relative isolate -mt-16 grid max-w-4xl grid-cols-1 place-content-center gap-y-4 sm:mx-auto sm:grid-cols-2 sm:gap-x-12 lg:grid-cols-2 xl:grid-cols-2">
             <div
@@ -68,16 +93,18 @@ export default function FreeClasses() {
                     {tier.name}
                   </h3>
                 </div>
+
+                {/* Use your Button to open the modal */}
                 <Button
-                  href={tier.href}
                   aria-describedby={tier.id}
                   variant="solid"
                   color="orange"
-                  target="_blank"
                   className="mt-5"
+                  onClick={() => handleOpen(tier.href)}
                 >
                   {tier.text}
                 </Button>
+
                 <p className="mt-10 text-left text-sm/6 font-semibold text-gray-900 dark:text-white">
                   {tier.description}
                 </p>
@@ -99,6 +126,15 @@ export default function FreeClasses() {
             ))}
           </div>
         </div>
+
+        {/* Calendly modal (renders only when a tier is selected) */}
+        {selectedUrl && (
+          <CalendlyModal
+            open={open}
+            onClose={() => setOpen(false)}
+            url={selectedUrl}
+          />
+        )}
       </div>
     </div>
   );
