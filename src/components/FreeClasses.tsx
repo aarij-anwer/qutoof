@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { ArrowTurnDownRightIcon } from '@heroicons/react/20/solid';
-import { Button } from './Button';
+import { ClientButton } from './ClientButton';
 import Avatar from './Avatar';
 import CalendlyModal from './CalendlyModal'; // ← from earlier snippet
 
@@ -94,8 +94,8 @@ export default function FreeClasses() {
                   </h3>
                 </div>
 
-                {/* Use your Button to open the modal */}
-                <Button
+                {/* Use your ClientButton to open the modal */}
+                <ClientButton
                   aria-describedby={tier.id}
                   variant="solid"
                   color="orange"
@@ -103,7 +103,7 @@ export default function FreeClasses() {
                   onClick={() => handleOpen(tier.href)}
                 >
                   {tier.text}
-                </Button>
+                </ClientButton>
 
                 <p className="mt-10 text-left text-sm/6 font-semibold text-gray-900 dark:text-white">
                   {tier.description}
