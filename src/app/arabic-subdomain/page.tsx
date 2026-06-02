@@ -36,7 +36,10 @@ export default function ArabicSubdomainHome() {
             Free resources for all.
           </h2>
           <div className="mt-6 flex justify-center gap-x-6">
-            <Button href="/arabic-subdomain/classes" variant="solid">
+            <Button
+              href="https://arabic.qutoofacademy.com/classes"
+              variant="solid"
+            >
               Access recorded classes
             </Button>
             <Button
