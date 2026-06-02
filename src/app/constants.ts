@@ -1,24 +1,27 @@
 import { NavProps } from '@/components/Nav';
 
+export const MAIN_SITE_URL = 'https://www.qutoofacademy.com';
+export const ARABIC_SITE_URL = 'https://arabic.qutoofacademy.com';
+
 export const NAV: NavProps[] = [
   {
-    href: '/#about',
+    href: `${MAIN_SITE_URL}/#about`,
     children: 'About',
   },
   {
-    href: '/#instructors',
+    href: `${MAIN_SITE_URL}/#instructors`,
     children: 'Instructors',
   },
   {
-    href: '/#pricing',
+    href: `${MAIN_SITE_URL}/#pricing`,
     children: 'Pricing',
   },
   {
-    href: '/free',
+    href: `${MAIN_SITE_URL}/free`,
     children: 'Free Class',
   },
   {
-    href: 'https://arabic.qutoofacademy.com',
+    href: ARABIC_SITE_URL,
     children: 'Arabic',
   },
 ];

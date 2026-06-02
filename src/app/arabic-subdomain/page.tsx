@@ -2,6 +2,7 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { ARABIC_SITE_URL } from '@/app/constants';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function ArabicSubdomainHome() {
           </h2>
           <div className="mt-6 flex justify-center gap-x-6">
             <Button
-              href="https://arabic.qutoofacademy.com/classes"
+              href={`${ARABIC_SITE_URL}/classes`}
               variant="solid"
             >
               Access recorded classes
