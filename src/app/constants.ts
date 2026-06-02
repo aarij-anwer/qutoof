@@ -18,7 +18,7 @@ export const NAV: NavProps[] = [
     children: 'Free Class',
   },
   {
-    href: '/arabic-subdomain',
+    href: 'https://arabic.qutoofacademy.com',
     children: 'Arabic',
   },
 ];

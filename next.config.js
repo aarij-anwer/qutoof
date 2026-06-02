@@ -1,17 +1,18 @@
 /** @type {import('next').NextConfig} */
+const ARABIC_HOST = 'arabic.qutoofacademy.com';
+const ARABIC_INTERNAL_PATH = '/arabic-subdomain';
+
 const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/arabic-subdomain',
-        has: [{ type: 'host', value: 'arabic.qutoofacademy.com' }],
-        destination: '/',
+        source: ARABIC_INTERNAL_PATH,
+        destination: `https://${ARABIC_HOST}`,
         permanent: true,
       },
       {
-        source: '/arabic-subdomain/:path*',
-        has: [{ type: 'host', value: 'arabic.qutoofacademy.com' }],
-        destination: '/:path*',
+        source: `${ARABIC_INTERNAL_PATH}/:path*`,
+        destination: `https://${ARABIC_HOST}/:path*`,
         permanent: true,
       },
     ];
@@ -21,13 +22,13 @@ const nextConfig = {
     return [
       {
         source: '/',
-        has: [{ type: 'host', value: 'arabic.qutoofacademy.com' }],
-        destination: '/arabic-subdomain',
+        has: [{ type: 'host', value: ARABIC_HOST }],
+        destination: ARABIC_INTERNAL_PATH,
       },
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'arabic.qutoofacademy.com' }],
-        destination: '/arabic-subdomain/:path*',
+        has: [{ type: 'host', value: ARABIC_HOST }],
+        destination: `${ARABIC_INTERNAL_PATH}/:path*`,
       },
     ];
   },

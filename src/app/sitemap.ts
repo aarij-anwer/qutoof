@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.qutoofacademy.com';
+  const arabicBaseUrl = 'https://arabic.qutoofacademy.com';
   const currentDate = new Date();
 
   return [
@@ -34,6 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'yearly',
       priority: 0.3,
+    },
+    {
+      url: arabicBaseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${arabicBaseUrl}/classes`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ];
 }
