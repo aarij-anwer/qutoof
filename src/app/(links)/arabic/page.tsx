@@ -31,7 +31,9 @@ export default function Arabic() {
     <>
       <Header />
       <ArabicClasses />
-      <Footer />
+      <div className="hidden sm:block">
+        <Footer />
+      </div>
     </>
   );
 }
