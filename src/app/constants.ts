@@ -17,10 +17,10 @@ export const NAV: NavProps[] = [
     href: '/free',
     children: 'Free Class',
   },
-  // {
-  //   href: '/#pricing',
-  //   children: 'Pricing',
-  // },
+  {
+    href: '/arabic-subdomain',
+    children: 'Arabic',
+  },
 ];
 
 export const PEOPLE = [
