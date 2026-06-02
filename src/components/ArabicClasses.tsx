@@ -28,10 +28,10 @@ const tiers: Tier[] = [
     price: { monthly: '$19', annually: '$15' },
     description: 'Arabic instruction specializes in',
     features: [
+      'Advanced Arabic',
+      'Quran, Fiqh and Islamic sciences',
+      'Fluent in Arabic and English',
       'Modern Standard Arabic',
-      'Conversational skills',
-      'Grammar fundamentals',
-      'Cultural context',
     ],
   },
   {
@@ -45,8 +45,8 @@ const tiers: Tier[] = [
     features: [
       'Quranic Arabic',
       'Advanced grammar',
-      'Classical texts',
-      'Linguistic depth',
+      'Conversational fluency',
+      'Reading comprehension',
     ],
   },
   {
@@ -58,10 +58,10 @@ const tiers: Tier[] = [
     price: { monthly: '$29', annually: '$25' },
     description: 'Arabic instruction specializes in',
     features: [
-      'Beginner-friendly approach',
-      'Interactive learning',
-      'Daily vocabulary',
-      'Language immersion',
+      'Woman and kids instruction',
+      'Fluent in Arabic and English',
+      'Bespoke lesson plans',
+      'Conversational Arabic',
     ],
   },
 ];
