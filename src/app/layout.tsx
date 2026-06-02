@@ -1,4 +1,5 @@
 import { type Metadata } from 'next';
+import Script from 'next/script';
 import { Inter, Lexend } from 'next/font/google';
 import clsx from 'clsx';
 import { Analytics } from '@vercel/analytics/next';
@@ -124,6 +125,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-J6J5X721ZV"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-config" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J6J5X721ZV');`}
+        </Script>
       </head>
       <body className="flex h-full flex-col">
         {children}
