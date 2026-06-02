@@ -25,7 +25,7 @@ export default function ArabicSubdomainHome() {
     <>
       <Header />
       <main>
-        <Container className="mx-10 mb-32 flex flex-col gap-6 text-center">
+        <Container className="mx-10 flex flex-col gap-6 pt-10 pb-20 text-center sm:py-32">
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
             Understand the Shari&apos;ah and the{' '}
             <span className="relative whitespace-nowrap text-yellow-600">
